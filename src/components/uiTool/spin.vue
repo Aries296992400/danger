@@ -32,7 +32,7 @@ export default {
         } else {
           this.dot += "。";
         }
-      }, 200);
+      }, 300);
 
       var timer = setInterval(() => {
         this.num += 3;
