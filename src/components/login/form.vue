@@ -6,7 +6,7 @@
     </div>
     <div class="formInput">
       <a-input style="width:260px;" placeholder="请输入用户名" size="large" v-model="user" />
-      <a-input style="width:260px;" placeholder="请输入密码" size="large" v-model="pass" />
+      <a-input style="width:260px;" placeholder="请输入密码" size="large" type='password' v-model="pass" />
       <a-button style="width:140px;" type="primary" size="large" @click="login">登录</a-button>
     </div>
   </div>

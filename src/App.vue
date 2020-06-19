@@ -10,9 +10,7 @@
 import _StorageTools from "./components/tool/_StorageTools";
 export default {
   name: "App",
-  components: {
-
-  },
+  components: {},
   updated() {
     this.checkIsLogin();
   },
@@ -36,9 +34,11 @@ export default {
     checkIsLogin() {
       var token = _StorageTools.getItem("token");
       if (!token) {
-        this.$router.push("/login")
+        this.$router.push("/login");
       } else {
-        this.$router.push("/dashboard")
+        if (this.$router.history.current.fullPath == "/login") {
+          this.$router.push("/dashboard");
+        }
       }
     }
   }
@@ -56,7 +56,8 @@ export default {
 .slide-fade-leave-active {
   transition: all 0.3s;
 }
-.slide-fade-enter, .slide-fade-leave-to {
+.slide-fade-enter,
+.slide-fade-leave-to {
   opacity: 0;
 }
 </style>

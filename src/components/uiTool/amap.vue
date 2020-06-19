@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="amap">
     <el-amap style="width:100%;height:100%;" :events="mapEvents"></el-amap>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.app {
+.amap {
   width: 100%;
   height: 100%;
   position: fixed;

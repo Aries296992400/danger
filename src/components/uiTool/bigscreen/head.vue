@@ -22,7 +22,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .head_center p:nth-child(1) {
   font-size: 30px;
@@ -34,6 +33,7 @@ export default {
   margin: 0;
 }
 .head_center {
+  user-select: none;
   width: 300px;
   height: 50px;
   position: absolute;
