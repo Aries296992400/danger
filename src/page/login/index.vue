@@ -18,10 +18,7 @@ export default {
    
   },
   methods:{
-    checkIsLogin(){
-      
-      console.log(123)
-    }
+    
   }
 };
 </script>

@@ -48,7 +48,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../../../assets/box2.png");
+  background: url("../../../assets/box2.png") center center / 100% 100% no-repeat;
   background-size: contain;
   z-index: 999;
 }

@@ -6,12 +6,12 @@
         <Amap></Amap>
         <Head></Head>
         <Menu />
-        <Box2 title="危险源类别监控" class="box" style="top:150px;left:50px;"></Box2>
-        <Box2 title="特殊危险源监控" class="box" style="top:470px;left:50px;"></Box2>
-        <Box2 title="疲劳驾驶预警" class="box" style="top:790px;left:50px;"></Box2>
-        <Box2 title="地区天气预警" class="box" style="top:150px;right:50px;"></Box2>
-        <Box2 title="疑似泄露预警" class="box" style="top:470px;right:50px;"></Box2>
-        <Box2 title="行程时间分布" class="box" style="top:790px;right:50px;"></Box2>
+        <Box2 title="危险源类别监控" class="box" style="top:13%;left:50px;"></Box2>
+        <Box2 title="特殊危险源监控" class="box" style="top:43%;left:50px;"></Box2>
+        <Box2 title="疲劳驾驶预警" class="box" style="top:73%;left:50px;"></Box2>
+        <Box2 title="地区天气预警" class="box" style="top:13%;right:50px;"></Box2>
+        <Box2 title="疑似泄露预警" class="box" style="top:43%;right:50px;"></Box2>
+        <Box2 title="行程时间分布" class="box" style="top:73%;right:50px;"></Box2>
       </div>
     </transition>
   </div>
@@ -72,9 +72,9 @@ export default {
   cursor: pointer;
 }
 .box {
-  position: absolute;
-  width: 500px;
-  height: 300px;
+  position: fixed;
+  width: 25%;
+  height: 26%;
 }
 .content {
   width: 100%;
