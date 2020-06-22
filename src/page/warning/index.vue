@@ -1,5 +1,6 @@
 <template>
-  <div>warning
+  <div>
+    warning
     <Menu />
   </div>
   

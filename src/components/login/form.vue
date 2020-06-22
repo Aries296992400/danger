@@ -31,10 +31,7 @@ export default {
       if (this.user == "123" && this.pass == "123") {
         _StorageTools.setItem("token", "yes");
         // location.reload()
-        this.$router.push("/")
-        console.log("登录成功");
-      } else {
-        console.log("登录失败");
+        this.$router.push("/dashboard")
       }
     }
   }

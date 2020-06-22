@@ -6,7 +6,9 @@
         <Amap></Amap>
         <Head></Head>
         <Menu />
-        <Box2 title="危险源类别监控" class="box" style="top:13%;left:50px;"></Box2>
+        <Box2 title="危险源类别监控" class="box" style="top:13%;left:50px;">
+          <echarts :option="option" ></echarts>
+        </Box2>
         <Box2 title="特殊危险源监控" class="box" style="top:43%;left:50px;"></Box2>
         <Box2 title="疲劳驾驶预警" class="box" style="top:73%;left:50px;"></Box2>
         <Box2 title="地区天气预警" class="box" style="top:13%;right:50px;"></Box2>
@@ -18,11 +20,13 @@
 </template>
 
 <script>
+
 import Spin from "../../components/uiTool/spin";
 import Amap from "../../components/uiTool/amap";
 import Head from "../../components/uiTool/bigscreen/head";
 import Box2 from "../../components/uiTool/bigscreen/box2";
 import Menu from "../../components/menu/menu";
+import echarts from "../../components/uiTool/echarts";
 
 export default {
   name: "dashboard",
@@ -31,11 +35,37 @@ export default {
     Amap,
     Head,
     Box2,
-    Menu
+    Menu,
+    echarts
   },
   props: {},
+  mounted() {
+    
+  },
   data() {
     return {
+      option: {
+        grid:{
+          top:30,
+          left:30,
+          bottom:30,
+          right:30
+        },
+        xAxis: {
+          type: "category",
+          data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        },
+        yAxis: {
+          type: "value"
+        },
+        series: [
+      {
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: "line",
+        smooth: true
+      }
+    ]
+      },
       isSpin: true,
       mapEvents: {
         init(o) {
@@ -48,13 +78,13 @@ export default {
   methods: {
     changeSpin() {
       this.isSpin = !this.isSpin;
-    },
+    }
   }
 };
 </script>
 
 <style scoped>
-.menuButton{
+.menuButton {
   width: 100%;
   height: 50px;
   line-height: 50px;

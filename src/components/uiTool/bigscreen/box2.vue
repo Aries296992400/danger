@@ -5,6 +5,9 @@
       {{title}}
       <div class="titleImg"></div>
     </div>
+    <div class="content">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -23,19 +26,29 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.content{
+  width: 85%;
+  height: calc(100% - 100px);
+  margin: auto;
+  position: relative;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .titleImg {
   width: 200px;
   height: 20px;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
-  top: 15px;
+  top: 0px;
   margin: auto;
   background: url("../../../assets/title.png");
   background-size: contain;
 }
 .title {
-  position: absolute;
+  position: relative;
   width: 200px;
   left: 0;
   right: 0;
