@@ -7,7 +7,7 @@
         <Head></Head>
         <Menu />
         <Box2 title="危险源类别监控" class="box" style="top:13%;left:50px;">
-          <echarts :option="option" ></echarts>
+          <echarts :option="option"></echarts>
         </Box2>
         <Box2 title="特殊危险源监控" class="box" style="top:43%;left:50px;"></Box2>
         <Box2 title="疲劳驾驶预警" class="box" style="top:73%;left:50px;"></Box2>
@@ -20,7 +20,6 @@
 </template>
 
 <script>
-
 import Spin from "../../components/uiTool/spin";
 import Amap from "../../components/uiTool/amap";
 import Head from "../../components/uiTool/bigscreen/head";
@@ -39,32 +38,138 @@ export default {
     echarts
   },
   props: {},
-  mounted() {
-    
-  },
+  mounted() {},
   data() {
     return {
       option: {
-        grid:{
-          top:30,
-          left:30,
-          bottom:30,
-          right:30
+        dataset: {
+          source: [
+            ["product", "nums"],
+            ["Linux 7.x", 100],
+            ["Linux 6.6.x", 200],
+            ["Windows7", 120],
+            ["Windows10", 240]
+          ]
         },
-        xAxis: {
-          type: "category",
-          data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        color: [
+          "#d74e67",
+          "#0092ff",
+          "#eba954",
+          "#21b6b9",
+          "#60a900",
+          "#01949b",
+          " #f17677"
+        ],
+        grid: {
+          left: "45%",
+          top: "center",
+          right: "1%",
+          containLabel: true
         },
+        xAxis: [
+          {
+            show: false
+          },
+          {
+            show: false
+          }
+        ],
         yAxis: {
-          type: "value"
+          type: "category",
+          inverse: true,
+          show: false
         },
+
         series: [
-      {
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: "line",
-        smooth: true
-      }
-    ]
+          {
+            tooltip: {
+              trigger: "item",
+              formatter: "{b} : {c} ({d}%)"
+            },
+            type: "pie",
+            center: ["20%", "50%"],
+            radius: ["30%", "35%"],
+            avoidLabelOverlap: false,
+
+            label: {
+              normal: {
+                formatter: "{b}\n{d}%"
+              }
+            },
+            labelLine: {
+              normal: {
+                show: true
+              }
+            },
+            encode: {
+              itemName: "product",
+              value: "nums"
+            }
+          },
+          //亮色条 百分比
+          {
+            show: true,
+            type: "bar",
+            barGap: "-100%",
+            barWidth: "20%",
+            z: 2,
+            color: function(params) {
+              // build a color map as your need.
+              var colorList = [
+                "#d74e67",
+                "#0092ff",
+                "#eba954",
+                "#21b6b9",
+                "#60a900",
+                "#01949b",
+                " #f17677"
+              ];
+              return colorList[params.dataIndex];
+            },
+            label: {
+              normal: {
+                show: true,
+                textStyle: {
+                  color: "#000",
+                  fontSize: 25,
+                  fontWeight: "bold"
+                },
+                position: "right"
+              }
+            },
+            encode: {
+              x: "nums"
+            }
+          },
+          //年份
+          {
+            show: true,
+            type: "bar",
+            xAxisIndex: 1, //代表使用第二个X轴刻度
+            barGap: "-100%",
+            barWidth: "10%",
+            itemStyle: {
+              normal: {
+                barBorderRadius: 200,
+                color: "transparent"
+              }
+            },
+            label: {
+              normal: {
+                show: true,
+                position: [0, "-20"],
+                formatter: "{b}",
+                textStyle: {
+                  fontSize: 14,
+                  color: "#333"
+                }
+              }
+            },
+            encode: {
+              y: "product"
+            }
+          }
+        ]
       },
       isSpin: true,
       mapEvents: {
