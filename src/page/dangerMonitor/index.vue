@@ -1,16 +1,19 @@
 <template>
-  <div>
-    dangermonitor
+  <div class="content">
+    <Back></Back>
     <Menu />
   </div>
 </template>
 
 <script>
 import Menu from "../../components/menu/menu";
+import Back from "../../components/uiTool/background"
+
 export default {
   name: "DangerMonitor",
   components: {
-    Menu
+    Menu,
+    Back
   },
   props: {},
   methods: {}
