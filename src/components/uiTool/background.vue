@@ -31,6 +31,6 @@ export default {
   position: fixed;
   background: url("../../assets/back.jpg") no-repeat;
   /* background-color: red; */
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 </style>

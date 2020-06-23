@@ -4,7 +4,10 @@
       <Spin v-if="isSpin" :data="isSpin" @changeSpin="changeSpin" />
       <div v-else class="content">
         <Amap></Amap>
-        <Head></Head>
+        <Head>
+          <p>数据展示仓</p>
+          <p>危险源车辆运输监控管理平台</p>
+        </Head>
         <Menu />
         <Box2 title="危险源分类监控" autoSize="true" titleSize="2" class="boxD" style="top:13%;left:50px;">
           <echarts :option="wxyfl" @click="onClick()"></echarts>

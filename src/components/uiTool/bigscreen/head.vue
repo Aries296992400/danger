@@ -3,8 +3,9 @@
     <div class="head">
       <dv-decoration-8 class="head_left" />
       <div class="head_center">
-        <p>数据展示仓</p>
-        <p>危险源车辆运输监控管理平台</p>
+        <!-- <p>数据展示仓</p>
+        <p>危险源车辆运输监控管理平台</p> -->
+        <slot></slot>
       </div>
       <dv-decoration-8 :reverse="true" class="head_right" />
     </div>
