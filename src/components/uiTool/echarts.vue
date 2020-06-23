@@ -25,6 +25,7 @@ export default {
 <style scoped>
 .echarts {
   width: 100%;
-  height: 100%;
+  height: calc(100%);
+  z-index: 9999;
 }
 </style>
