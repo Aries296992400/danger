@@ -36,6 +36,7 @@
         <a-icon type="export" style="margin-right:25px;" />退出登录
       </div>
     </a-drawer>
+
     <div class="content">
       <a-icon type="menu" class="menu" @click="onClose()" />
     </div>
@@ -99,5 +100,6 @@ export default {
   top: 20px;
   right: 20px;
   cursor: pointer;
+  z-index: 999;
 }
 </style>
