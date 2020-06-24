@@ -343,7 +343,17 @@ export default {
     },
     bjtj: {
         title: {
-            text: ""
+        //    text:"每/n10分钟刷新一次",
+           x: "left",
+            y: "-5px",
+            textStyle: {
+                //副标题文本样式{"color": "#aaa"}
+                fontFamily: "Arial, Verdana, sans...",
+                fontSize: 20,
+                fontStyle: "normal",
+                fontWeight: "normal",
+                color: "#ace8f2"
+            }
         },
 
         color: ["#2cb7ff", "#1785ef", "#20c8ff", "#2cb7ff", "#1785ef"],
@@ -2105,4 +2115,265 @@ export default {
             }
         ]
       },
+      wxyflyj:{
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                crossStyle: {
+                    color: '#999'
+                }
+            }
+        },
+        toolbox: {
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        legend: {
+            data: ['一类','二类','三类','四类','五类','六类','七类','八类','九类'],
+            x: 'center', // 'center' | 'left' | {number},
+            y: 'top', // 'center' | 'bottom' | {number}
+            // padding: 10,    // [5, 10, 15, 20]
+            itemGap: 20,
+            textStyle: {color: 'white',fontSize:10},
+        },
+        grid:{
+            top:'22%',//距上边距
+            // left:'25%',//距离左边距
+            // right:'25%',//距离右边距
+            // bottom:'25%',//距离下边距
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                axisPointer: {
+                    type: 'shadow',
+                },
+                axisLabel: {
+                    textStyle: {
+                        // color: '#3f96a5'
+                        color: '#80adb5'
+                    }
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '预警次数',
+                min: 0,
+                max: 200,
+                interval: 50,
+                nameTextStyle: { color: '#3f96a5',align: 'left' },
+                axisLabel: {
+                    formatter: '{value} 次',
+                    textStyle: {
+                        color: '#3f96a5'
+                        // color: '#80adb5'
+                    }
+                }
+            },
+            // {
+            //     type: 'value',
+            //     name: '涉及种类',
+            //     min: 0,
+            //     max: 23,
+            //     interval: 5,
+            //     axisLabel: {
+            //         formatter: '{value} 种'
+            //     }
+            // }
+        ],
+        series: [
+            {
+                name: '一类',
+                type: 'bar',
+                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            },
+            {
+                name: '二类',
+                type: 'bar',
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            },
+            {
+                name: '三类',
+                type: 'bar',
+                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            },
+            {
+                name: '四类',
+                type: 'bar',
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            },
+            {
+                name: '五类',
+                type: 'bar',
+                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            },
+            {
+                name: '六类',
+                type: 'bar',
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            },
+            {
+                name: '七类',
+                type: 'bar',
+                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            },
+            {
+                name: '八类',
+                type: 'bar',
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            },
+            {
+                name: '九类',
+                type: 'bar',
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            },
+            // {
+            //     name: '日均预警数量',
+            //     type: 'line',
+            //     yAxisIndex: 1,
+            //     data: [2, 2, 3, 4, 6, 10, 20, 20, 23.0, 16, 12, 6]
+            // }
+        ]
+      },
+      tswxyflyj:{
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                crossStyle: {
+                    color: '#999'
+                }
+            }
+        },
+        toolbox: {
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        legend: {
+            data: ['医废','危废'],
+            x: 'center', // 'center' | 'left' | {number},
+            y: 'top', // 'center' | 'bottom' | {number}
+            // padding: 10,    // [5, 10, 15, 20]
+            itemGap: 20,
+            textStyle: {color: 'white',fontSize:10},
+        },
+        grid:{
+            top:'22%',//距上边距
+            // left:'25%',//距离左边距
+            // right:'25%',//距离右边距
+            // bottom:'25%',//距离下边距
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                axisPointer: {
+                    type: 'shadow',
+                },
+                axisLabel: {
+                    textStyle: {
+                        // color: '#3f96a5'
+                        color: '#80adb5'
+                    }
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '预警次数',
+                min: 0,
+                max: 200,
+                interval: 50,
+                nameTextStyle: { color: '#3f96a5',align: 'left' },
+                axisLabel: {
+                    formatter: '{value} 次',
+                    textStyle: {
+                        color: '#3f96a5'
+                        // color: '#80adb5'
+                    }
+                }
+            },
+            // {
+            //     type: 'value',
+            //     name: '涉及种类',
+            //     min: 0,
+            //     max: 23,
+            //     interval: 5,
+            //     axisLabel: {
+            //         formatter: '{value} 种'
+            //     }
+            // }
+        ],
+        series: [
+            {
+                name: '医废',
+                type: 'bar',
+                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            },
+            {
+                name: '危废',
+                type: 'bar',
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            },
+            
+            // {
+            //     name: '日均预警数量',
+            //     type: 'line',
+            //     yAxisIndex: 1,
+            //     data: [2, 2, 3, 4, 6, 10, 20, 20, 23.0, 16, 12, 6]
+            // }
+        ]
+      },
+      yjxxbt:{
+
+            color: ['#37a2da','#32c5e9','#9fe6b8','#ffdb5c','#ff9f7f','#fb7293','#e7bcf3','#8378ea'],
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            toolbox: {
+                show : true,
+            },
+            legend: {
+                type:"scroll",
+                orient: 'vertical',
+                left:'10%',
+                align:'left',
+                top:'middle',
+                textStyle: {
+                    color:'#8C8C8C'
+                },
+                height:150
+            },
+            series:[
+                {
+                    name:'业务警种',
+                    type:'pie',
+                    radius : [0, 150],
+                    data:[
+                        {value:20, name:'国宝'},
+                        {value:30, name:'治安'},
+                        {value:25, name:'rose3'},
+                        {value:25, name:'rose4'},
+                        {value:20, name:'rose5'},
+                        {value:35, name:'rose6'},
+                        {value:30, name:'rose7'},
+                        {value:40, name:'rose8'}
+                    ]
+                }
+            ]
+      }
 };

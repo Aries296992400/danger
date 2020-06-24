@@ -31,6 +31,12 @@
       <div class="menuButton" @click="GoToPage(`carMonitor`)">
         <a-icon type="appstore" style="margin-right:25px;" />车辆监控表
       </div>
+      <div class="menuButton" @click="GoToPage(`carDetail`)">
+        <a-icon type="appstore" style="margin-right:25px;" />车辆监控表2
+      </div>
+      <div class="menuButton" @click="GoToPage(`carWarning`)">
+        <a-icon type="appstore" style="margin-right:25px;" />车辆监控表3
+      </div>
 
       <div class="menuButton" @click="OnExit()">
         <a-icon type="export" style="margin-right:25px;" />退出登录

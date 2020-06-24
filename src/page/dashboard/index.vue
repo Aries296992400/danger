@@ -24,8 +24,8 @@
         >
           <echarts :option="ssyj"></echarts>
         </Box2> -->
-        <Box2 title="实时警报统计" autoSize="true" class="boxD" style="top:13%;right:50px;">
-          <echarts :option="bjtj" style="margin-top:20px"></echarts>
+        <Box2 title="实时警报统计" titleSize="2" autoSize="true" class="boxD" style="top:13%;right:50px;">
+          <echarts :option="bjtj" style="margin-top:20%"></echarts>
         </Box2>
         <Box2 title="监控平台使用状态" autoSize="true" class="box" style="top:73%;right:50px;">
           <dv-water-level-pond :config="jkxt" style="width:50%;height:80%" />
