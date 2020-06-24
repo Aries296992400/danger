@@ -9,6 +9,8 @@ const dashboard = r => require.ensure([], () => r(require('@/page/dashboard/inde
 
 const alert = r => require.ensure([], () => r(require('@/page/alert/index')), 'alert');
 const carMonitor = r => require.ensure([], () => r(require('@/page/carMonitor/index')), 'carMonitor');
+const carDetail = r => require.ensure([], () => r(require('@/page/carMonitor/carDetail')), 'carDetail');
+const carWarning = r => require.ensure([], () => r(require('@/page/carMonitor/carWarning')), 'carWarning');
 const dangerMonitor = r => require.ensure([], () => r(require('@/page/dangerMonitor/index')), 'dangerMonitor');
 const specilDangerMonitor = r => require.ensure([], () => r(require('@/page/specilDangerMonitor/index')), 'specilDangerMonitor');
 const warning = r => require.ensure([], () => r(require('@/page/warning/index')), 'warning');
@@ -40,6 +42,16 @@ const routes = [
 		path: '/carMonitor',
 		meta:{index:0},
 		component: carMonitor
+	},
+	{
+		path: '/carDetail',
+		meta:{index:0},
+		component: carDetail
+	},
+	{
+		path: '/carWarning',
+		meta:{index:0},
+		component: carWarning
 	},
 	{
 		path: '/dangerMonitor',

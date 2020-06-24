@@ -1021,5 +1021,1088 @@ export default {
       },
     // 迁徙
       map1:{
-      }
+      },
+      clzltj: {
+        color: ["#3398DB"],
+       
+        title:{
+            subtext:"车辆种类统计",
+            x:'center',
+            subtextStyle: {//副标题文本样式{"color": "#aaa"}
+            fontFamily: 'Arial, Verdana, sans...',
+            fontSize: 25,
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            color: '#ffffff'
+            },
+        },
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                // 坐标轴指示器，坐标轴触发有效
+                type: "shadow" // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: "category",
+                data: ["爆破器材", "气瓶", "医废", "易燃液体", "大型板车", "大型厢车", "杂项"],
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        // color: '#3f96a5'
+                        color: "#80adb5"
+                    }
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: "value",
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        // color: '#3f96a5'
+                        color: "#80adb5"
+                    }
+                }
+            }
+        ],
+        series: [
+            {
+                name: "直接访问",
+                type: "bar",
+                barWidth: "60%",
+                data: [10, 52, 200, 334, 390, 330, 220]
+            }
+        ]
+    },
+    cctj: {
+        color: ["#3398DB"],
+       
+        title:{
+            subtext:"历史出车统计",
+            x:'center',
+            subtextStyle: {//副标题文本样式{"color": "#aaa"}
+            fontFamily: 'Arial, Verdana, sans...',
+            fontSize: 25,
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            color: '#ffffff'
+            },
+        },
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                // 坐标轴指示器，坐标轴触发有效
+                type: "shadow" // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: "category",
+                data: ["2020-1", "2020-2", "2020-3", "2020-4", "2020-5", "2020-6", "2020-7"],
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        // color: '#3f96a5'
+                        color: "#80adb5"
+                    }
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: "value",
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        // color: '#3f96a5'
+                        color: "#80adb5"
+                    }
+                }
+            }
+        ],
+        series: [
+            {
+                name: "直接访问",
+                type: "bar",
+                barWidth: "60%",
+                data: [210, 352, 500, 1334, 1390, 830, 1220]
+            }
+        ]
+    },
+    sgfsdtj: {
+        color: ["#3398DB"],
+       
+        title:{
+            subtext:"事故发生地统计",
+            x:'center',
+            subtextStyle: {//副标题文本样式{"color": "#aaa"}
+            fontFamily: 'Arial, Verdana, sans...',
+            fontSize: 25,
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            color: '#ffffff'
+            },
+        },
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                // 坐标轴指示器，坐标轴触发有效
+                type: "shadow" // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: "category",
+                data: ["甘肃", "遂宁", "广东", "北京", "重庆", "西安", "辽宁"],
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        // color: '#3f96a5'
+                        color: "#80adb5"
+                    }
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: "value",
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        // color: '#3f96a5'
+                        color: "#80adb5"
+                    }
+                }
+            }
+        ],
+        series: [
+            {
+                name: "直接访问",
+                type: "bar",
+                barWidth: "60%",
+                data: [1, 1, 3, 3, 13, 2, 1]
+            }
+        ]
+    },
+    ssck:{
+        header: ['车牌', '危险等级', '始发地', '目的地',"出发时间", '监控时长'],
+        data: [
+          ['<span  style="color:black;background-color:">渝A56921</span>', '<span style="color:yellow;background-color:;">一级</span>', '<span style="color:black;">重庆</span>', '<span style="color:black;">湖北</span>', '<span style="color:black;">2020-06-01 7:00</span>', '<span style="color:black;">1小时8分钟</span>'],
+          ['<span  style="color:white;background-color:">渝A54921</span>', '<span style="color:yellow;background-color:;">二级</span>', '重庆', '厦门', '2020-06-01 7:00', '3小时18分钟'],
+          ['<span  style="color:black;background-color:">渝B23421</span>', '<span style="color:yellow;background-color:;">三级</span>', '<span style="color:black;">重庆</span>', '<span style="color:black;">河南</span>', '<span style="color:black;">2020-06-01 17:00</span>', '<span style="color:black;">5小时8分钟</span>'],
+          ['<span  style="color:white;background-color:">渝S56921</span>', '<span style="color:yellow;background-color:;">四级</span>', '重庆', '广州', '2020-06-01 7:00', '1小时0分钟'],
+          ['<span  style="color:black;background-color:">渝A56211</span>', '<span style="color:yellow;background-color:;">五级</span>', '<span style="color:black;">重庆</span>', '<span style="color:black;">广东</span>', '<span style="color:black;">2020-06-02 10:00</span>', '<span style="color:black;">40小时8分钟</span>'],
+          ['<span  style="color:white;background-color:">渝C56324</span>', '<span style="color:red;background-color:;">六级</span>', '重庆', '上海','2020-06-02 7:00',  '25小时11分钟'],
+          ['<span  style="color:black;background-color:">渝D53221</span>', '<span style="color:red;background-color:;">七级</span>', '<span style="color:black;">重庆</span>', '<span style="color:black;">广西</span>', '<span style="color:black;">2020-06-02 17:00</span>', '<span style="color:black;">22小时27分钟</span>'],
+          ['<span  style="color:white;background-color:">渝A12921</span>', '<span style="color:red;background-color:;">八级</span>', '重庆', '北京', '2020-06-02 7:00', '12小时28分钟'],
+          ['<span  style="color:black;background-color:">渝A32121</span>', '<span style="color:red;background-color:;">一级</span>', '<span style="color:black;">重庆</span>', '<span style="color:black;">北京</span>', '<span style="color:black;">2020-06-03 17:00</span>', '<span style="color:black;">6小时44分钟</span>'],
+          ['<span  style="color:white;background-color:">渝E53221</span>', '<span style="color:red;background-color:;">一级</span>', '重庆', '黑龙江','2020-06-03 7:00',  '2小时25分钟'],
+          ['<span  style="color:black;background-color:">渝F55421</span>', '<span style="color:red;background-color:;">一级</span>', '<span style="color:black;">重庆</span>', '<span style="color:black;">拉萨</span>', '<span style="color:black;">2020-06-01 17:00</span>', '<span style="color:black;">4小时58分钟</span>'],
+          ['<span  style="color:white;background-color:">渝F66921</span>', '<span style="color:red;background-color:;">一级</span>', '重庆', '海南','2020-06-02 7:00',  '7小时32分钟']
+        ],
+        index: false,
+        columnWidth: [90,80,80,80,150,120],
+        align: ['center','center','center','center','center','center'],
+        oddRowBGC:"#3B828F",
+        evenRowBGC:"#91C3CC",
+        headerBGC:'#739AA2',
+        rowNum:4,
+        waitTime:3000
+    },
+    sscctj:{
+        title: {
+            text: '今日出车信息统计',
+            x:'center',
+            y:'15px',
+            textStyle: {//副标题文本样式{"color": "#aaa"}
+            fontFamily: 'Arial, Verdana, sans...',
+            fontSize: 25,
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            color: '#ffffff'
+            },
+        },
+        xAxis: {
+            data: ['18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    // color: '#3f96a5'
+                    color: '#80adb5'
+                }
+            }
+            
+        },
+        yAxis: {
+          axisLabel: {
+              show: true,
+              textStyle: {
+                  // color: '#3f96a5'
+                  color: '#80adb5'
+              }
+            }
+        },
+        series: [{
+            type: 'line',
+            data:[220, 182, 191, 234, 290, 330, 310],
+            markPoint: {
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return idx * 200 + 1000;  
+                },
+                data: [{
+                    type: 'min'
+                }, {
+                    type: 'max'
+                }]
+            }
+        }]
+      },
+      ssjbtj:{
+        title: {
+            text: '今日警报信息统计',
+            x:'center',
+            y:'15px',
+            textStyle: {//副标题文本样式{"color": "#aaa"}
+            fontFamily: 'Arial, Verdana, sans...',
+            fontSize: 25,
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            color: '#ffffff'
+            },
+        },
+        xAxis: {
+            data: ['18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    // color: '#3f96a5'
+                    color: '#80adb5'
+                }
+            }
+            
+        },
+        yAxis: {
+          axisLabel: {
+              show: true,
+              textStyle: {
+                  // color: '#3f96a5'
+                  color: '#80adb5'
+              }
+            }
+        },
+        series: [{
+            type: 'line',
+            data:[12, 53, 181, 111, 234, 330, 310],
+            markPoint: {
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return idx * 200 + 1000;  
+                },
+                data: [{
+                    type: 'min'
+                }, {
+                    type: 'max'
+                }]
+            }
+        }]
+      },
+      sjxx:{
+        radius: '70%',
+        activeRadius: '75%',
+        data: [
+          {
+            name: '出车(次)',
+            value: 55
+          },
+          {
+            name: '里程(公里)',
+            value: 120
+          },
+          {
+            name: '危险品(种)',
+            value: 78
+          },
+          {
+            name: '危险品(吨)',
+            value: 66
+          },
+          {
+            name: '事故(起)',
+            value: 8
+          }
+        ],
+        lineWidth: 15,
+        digitalFlopStyle: {
+          fontSize: 17,
+          fill: '#fff'
+        },
+        showOriginValue: 'true'
+      },
+      sswd:{
+        title: {
+            text: '危险品温度走势图',
+            x:'center',
+            y:'25px',
+            textStyle: {//副标题文本样式{"color": "#aaa"}
+            fontFamily: 'Arial, Verdana, sans...',
+            fontSize: 25,
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            color: '#ffffff'
+            },
+        },
+        xAxis: {
+            data: ['18:00', '18:05', '18:10', '18:15', '18:20', '18:25', '18:30'],
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    // color: '#3f96a5'
+                    color: '#80adb5'
+                }
+            }
+            
+        },
+        yAxis: {
+          axisLabel: {
+              show: true,
+              textStyle: {
+                  // color: '#3f96a5'
+                  color: '#80adb5'
+              }
+            },
+            min: 10,
+            max: 30,
+            interval: 5
+        },
+        series: [{
+            type: 'line',
+            data:[23, 22, 22, 22, 23, 21, 20],
+            markPoint: {
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return idx * 200 + 1000;  
+                },
+                data: [{
+                    type: 'min'
+                }, {
+                    type: 'max'
+                }]
+            }
+        }]
+      },
+      cgqbj:{
+        color: ['#bf19ff', '#854cff', '#5f45ff', '#02cdff', '#314976', '#f9e264', '#f47a75', '#009db2', '#024b51- 0780cf', '#765005'],
+        
+        title: {
+            text: 18,
+            subtext: '总计',
+            textStyle: {
+                color: '#f2f2f2',
+                fontSize: 20,
+            },
+            subtextStyle: {
+                fontSize: 15,
+                color: ['#ff9d19']
+            },
+            x: 'center',
+            y: 'center',
+        },
+        grid: {
+            bottom: 50,
+            left: 10,
+            right: '10%'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: '{b}<br/> {c}次  ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            x:'bottom',      //可设定图例在左、右、居中
+            y:'center',     //可设定图例在上、下、居中
+            padding:[0,50,0,0],
+            textStyle: {
+                color: '#f2f2f2',
+                fontSize: 8,
+   
+            },
+            icon: 'roundRect',
+            data: [{
+                "name": "温度报警",
+                "value": 7
+            }, {
+                "name": "湿度报警",
+                "value": 2
+            }, {
+                "name": "浓度报警",
+                "value": 1
+            }, {
+                "name": "疲劳驾驶报警",
+                "value": 5
+            },  {
+                "name": "其他报警",
+                "value": 3
+            }, ],
+        },
+        series: [
+            // 主要展示层的
+            {
+                radius: ['50%', '90%'],
+                center: ['50%', '50%'],
+                type: 'pie',
+                // label: {
+                //     position: 'inner',
+                //     formatter: '{b}：{c}次',
+                // },
+                labelLine: {
+                    normal: {
+                        show: true,
+                        length: 8,
+                        length2: 9
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                data: [{
+                    "name": "温度报警",
+                    "value": 7
+                }, {
+                    "name": "湿度报警",
+                    "value": 2
+                }, {
+                    "name": "浓度报警",
+                    "value": 1
+                }, {
+                    "name": "疲劳驾驶报警",
+                    "value": 5
+                },  {
+                    "name": "其他报警",
+                    "value": 3
+                }, ],
+   
+            },
+            // 边框的设置
+            {
+                radius: ['45%', '50%'],
+                center: ['50%', '50%'],
+                type: 'pie',
+                label: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                animation: false,
+                tooltip: {
+                    show: false
+                },
+                data: [{
+                    value: 1,
+                    itemStyle: {
+                        color: "rgba(250,250,250,0.3)",
+                    },
+                }],
+            }, {
+                name: '外边框',
+                type: 'pie',
+                clockWise: false, //顺时加载
+                hoverAnimation: false, //鼠标移入变大
+                center: ['50%', '50%'],
+                radius: ['100%', '100%'],
+                label: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [{
+                    value: 9,
+                    name: '',
+                    itemStyle: {
+                        normal: {
+                            borderWidth: 2,
+                            borderColor: '#0b5263'
+                        }
+                    }
+                }]
+            },
+        ]
+      },
+      bt211:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|温度报警}\n'+'11%'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:89, name:'其他',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:11, name:'温度报警',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt231:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|湿度报警}\n'+'2%'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:98, name:'其它',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:2, name:'湿度报警',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt251:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|浓度报警}\n'+'9%'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:91, name:'其它',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:9, name:'浓度报警',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt271:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|疲劳驾驶预警}\n'+'28次'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:89, name:'其他',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:11, name:'疲劳驾驶预警',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt221:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|疲劳驾驶报警}\n'+'3次'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:85, name:'其它',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:15, name:'疲劳驾驶报警',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt241:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|天气预警}\n'+'15次'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:1, name:'其他',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:12, name:'天气预警',
+                        itemStyle: {
+                            color: 'red'
+                        }
+                    },
+                    {
+                        value:3, name:'四川',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'green'
+                        }
+                    },
+                    {
+                        value:5, name:'北京',
+                        itemStyle: {
+                            color: 'yellow'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt261:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|天气报警}\n'+'6次'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:1, name:'重庆',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:12, name:'广州',
+                        itemStyle: {
+                            color: 'red'
+                        }
+                    },
+                    {
+                        value:3, name:'四川',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'green'
+                        }
+                    },
+                    {
+                        value:5, name:'北京',
+                        itemStyle: {
+                            color: 'yellow'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt281:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|其它报警}\n'+'23次'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:89, name:'无事故',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:11, name:'其他报警',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
 };
