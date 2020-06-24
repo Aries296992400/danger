@@ -1,4 +1,3 @@
-
 export default {
     wxyfl: {
         title: {
@@ -404,5 +403,623 @@ export default {
             }
         ]
     },
-
+    zxt1:{
+        title: {
+            text: '2020-6-23  各时段统计信息',
+            x:'right',
+            y:'15px',
+            textStyle: {//副标题文本样式{"color": "#aaa"}
+            fontFamily: 'Arial, Verdana, sans...',
+            fontSize: 25,
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            color: '#ffffff'
+            },
+        },
+        xAxis: {
+            data: ['18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    // color: '#3f96a5'
+                    color: '#80adb5'
+                }
+            }
+            
+        },
+        yAxis: {
+          axisLabel: {
+              show: true,
+              textStyle: {
+                  // color: '#3f96a5'
+                  color: '#80adb5'
+              }
+            }
+        },
+        series: [{
+            type: 'line',
+            data:[220, 182, 191, 234, 290, 330, 310],
+            markPoint: {
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return idx * 200 + 1000;  
+                },
+                data: [{
+                    type: 'min'
+                }, {
+                    type: 'max'
+                }]
+            }
+        }]
+      },
+      bt1:{
+        radius: '70%',
+        activeRadius: '75%',
+        data: [
+          {
+            name: '早上',
+            value: 55
+          },
+          {
+            name: '中午',
+            value: 120
+          },
+          {
+            name: '下午',
+            value: 78
+          },
+          {
+            name: '晚上',
+            value: 66
+          },
+          {
+            name: '夜间',
+            value: 80
+          }
+        ],
+        lineWidth: 15,
+        digitalFlopStyle: {
+          fontSize: 20,
+          fill: '#fff'
+        }
+      },
+      bt21:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|综合事故率}\n'+'11%'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:89, name:'无事故',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:11, name:'事故',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt23:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|泄露事故率}\n'+'2%'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:98, name:'无事故',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:2, name:'事故',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt25:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|交通事故率}\n'+'9%'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:91, name:'无事故',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:9, name:'事故',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt27:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|安全运输完成}\n'+'3764次'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:89, name:'无事故',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:11, name:'事故',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt22:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|运输占比}\n'+'15%'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:85, name:'其它',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:15, name:'一类',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt24:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|事故高发地}\n'+'广州'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:1, name:'重庆',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:12, name:'广州',
+                        itemStyle: {
+                            color: 'red'
+                        }
+                    },
+                    {
+                        value:3, name:'四川',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'green'
+                        }
+                    },
+                    {
+                        value:5, name:'北京',
+                        itemStyle: {
+                            color: 'yellow'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt26:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|事故高发时段}\n'+'下午'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:1, name:'重庆',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:12, name:'广州',
+                        itemStyle: {
+                            color: 'red'
+                        }
+                    },
+                    {
+                        value:3, name:'四川',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'green'
+                        }
+                    },
+                    {
+                        value:5, name:'北京',
+                        itemStyle: {
+                            color: 'yellow'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+      bt28:{
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['60%', '70%'],
+                startAngle:0,
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        formatter: (params)=>{
+                            params;
+                            return '{top|避免事故发生}\n'+'23次'
+                        },
+                        rich: {
+                            top: {
+                                fontSize: 12,
+                                color: '#fff',
+                                
+                            },
+                            bottom: {
+                                fontSize: 14,
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                padding: [0, 0, 12, 0],
+                            }
+                        }
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }    
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {
+                        value:89, name:'无事故',
+                        highlight: true,
+                        label: {
+                          show: true  
+                        },
+                        itemStyle: {
+                            color:'#feb000'
+                        }
+                    },
+                    {
+                        value:11, name:'事故',
+                        itemStyle: {
+                            color: '#00ffff'
+                        }
+                    },
+                    
+                ]
+            }
+        ]
+      },
+    // 迁徙
+      map1:{
+      }
 };
