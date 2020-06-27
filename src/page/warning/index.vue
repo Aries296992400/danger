@@ -23,10 +23,9 @@
           <echarts :option="ssyj"></echarts>
         </Box2>-->
         <Box2 title="预警地图" autoSize="true" titleSize="2" class="boxD" style="top:13%;right:50px;">
-          <echarts2 :option="optionXyMap01"></echarts2>
+          <echarts2 :option="ChinaTest"></echarts2>
         </Box2>
         <Box2 title="预警信息更新" autoSize="true" class="box" style="top:73%;right:50px;">
-          <echarts :option="yjxxbt" style="width:1000px;height:1000px"></echarts>
         </Box2>
         <div class="topNum" style="top:16%;left:45%;border:2px solid #1adedd !important;">
           <div class="topNumTitle">{{this.key1}}</div>
@@ -56,6 +55,8 @@ import echarts from "../../components/uiTool/echarts";
 import Option from "../../const/option";
 import ChinaTest2 from "../../const/chinaTest2";
 import _StorageTools from "../../components/tool/_StorageTools";
+import ChinaTest from "../../const/chinaTest";
+
 var timer1;
 export default {
   name: "dashboard",
@@ -93,6 +94,8 @@ export default {
   },
   data() {
     return {
+      ChinaTest: ChinaTest.optionXyMap01,
+
       key1: _StorageTools.getItem("key1"),
       key2: _StorageTools.getItem("key2"),
       key3: _StorageTools.getItem("key3"),
@@ -115,7 +118,9 @@ export default {
           o.setMapStyle("amap://styles/9fc0c6eb94c8573dafbfe0e6cad0a633");
           o.setZoom(13);
         }
-      }
+      },
+     
+
     };
   },
   methods: {

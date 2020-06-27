@@ -28,7 +28,8 @@
         
     </Box2>
     <Box2 title="运输车辆轨迹图" autoSize="true" titleSize="1" class="boxSSS" style="top:13%;left:51%">
-      <echarts :option="map1"></echarts>
+            <echarts2 :option="ChinaTest"></echarts2>
+
     </Box2>
     <Box2  title="实时车况" autoSize="true" titleSize="1" class="boxSSSS" style="top:70%;left:51%">
       <dv-scroll-board @click="GoToPage(`carDetail`)" :config="ssck" class="aab"  style="color:white;height:90%" />  
@@ -43,7 +44,9 @@ import Box2 from "../../components/uiTool/bigscreen/box2";
 import Head from "../../components/uiTool/bigscreen/head";
 import echarts from "../../components/uiTool/echarts";
 import Option from "../../const/option";
+import echarts2 from "../../components/uiTool/echarts2";
 
+import ChinaTest from "../../const/chinaTest";
 
 export default {
   name: "DangerMonitor",
@@ -52,11 +55,13 @@ export default {
     Back,
     Box2,
     echarts,
-    Head
+    Head,
+    echarts2
   },
   props: {},
   data(){
     return {
+      ChinaTest: ChinaTest.optionXyMap01,
         clzltj:Option.clzltj,
         cctj:Option.cctj,
         sgfsdtj:Option.sgfsdtj,

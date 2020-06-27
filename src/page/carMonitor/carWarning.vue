@@ -49,7 +49,8 @@
         
     </Box2>
     <Box2 title="本次运输预警报警轨迹图" autoSize="true" titleSize="1" class="boxSSS" style="top:13%;left:51%">
-      <echarts :option="map1"></echarts>
+            <echarts2 :option="ChinaTest"></echarts2>
+
     </Box2>
     <Box2 title="实时参数" autoSize="true" titleSize="1" class="boxSSSS" style="top:70%;left:51%">
       <div class="d4" style="text-align: center; font-size:15px;">
@@ -81,7 +82,9 @@ import Box2 from "../../components/uiTool/bigscreen/box2";
 import Head from "../../components/uiTool/bigscreen/head";
 import echarts from "../../components/uiTool/echarts";
 import Option from "../../const/option";
+import ChinaTest from "../../const/chinaTest";
 
+import echarts2 from "../../components/uiTool/echarts2";
 
 export default {
   name: "DangerMonitor",
@@ -90,12 +93,14 @@ export default {
     Back,
     Box2,
     echarts,
-    Head
+    Head,
+    echarts2
   },
   props: {},
   methods: {},
   data(){
     return {
+      ChinaTest: ChinaTest.optionXyMap01,
         bt211:Option.bt211,
         bt221:Option.bt221,
         bt231:Option.bt231,

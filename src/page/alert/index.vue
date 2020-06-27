@@ -22,7 +22,10 @@
         >
           <echarts :option="ssyj"></echarts>
         </Box2>-->
-        <Box2 title="报警地图" autoSize="true" titleSize="2" class="boxD" style="top:13%;right:50px;"></Box2>
+        <Box2 title="报警地图" autoSize="true" titleSize="2" class="boxD" style="top:13%;right:50px;">
+          <echarts2 :option="ChinaTest"></echarts2>
+
+        </Box2>
         <Box2 title="报警信息更新" autoSize="true" class="box" style="top:73%;right:50px;">
           <echarts :option="yjxxbt" style="width:1000px;height:1000px"></echarts>
         </Box2>
@@ -45,6 +48,8 @@
 
 <script>
 import Back from "../../components/uiTool/background";
+import ChinaTest from "../../const/chinaTest";
+import echarts2 from "../../components/uiTool/echarts2";
 
 import Head from "../../components/uiTool/bigscreen/head";
 import Box2 from "../../components/uiTool/bigscreen/box2";
@@ -61,7 +66,8 @@ export default {
     Head,
     Box2,
     Menu,
-    echarts
+    echarts,
+    echarts2
   },
   props: {},
   mounted() {
@@ -82,6 +88,8 @@ export default {
   },
   data() {
     return {
+      ChinaTest: ChinaTest.optionXyMap01,
+
       key1: _StorageTools.getItem("key1"),
       key2: _StorageTools.getItem("key2"),
       key3: _StorageTools.getItem("key3"),
