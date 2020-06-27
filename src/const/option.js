@@ -1605,12 +1605,12 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|温度报警}\n'+'11%'
+                            return '{top|温度报警}\n'+'{bottom|11%}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF',
                                 
                             },
                             bottom: {
@@ -1640,13 +1640,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:11, name:'温度报警',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -1668,12 +1668,12 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|湿度报警}\n'+'2%'
+                            return '{top|湿度报警}\n'+'{bottom|2%}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF',
                                 
                             },
                             bottom: {
@@ -1703,13 +1703,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:2, name:'湿度报警',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -1731,12 +1731,12 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|浓度报警}\n'+'9%'
+                            return '{top|浓度报警}\n'+'{bottom|9%}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF',
                                 
                             },
                             bottom: {
@@ -1766,13 +1766,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:9, name:'浓度报警',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -1794,12 +1794,12 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|疲劳驾驶预警}\n'+'28次'
+                            return '{top|疲劳驾驶预警}\n'+'{bottom|28次}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF',
                                 
                             },
                             bottom: {
@@ -1829,13 +1829,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:11, name:'疲劳驾驶预警',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -1857,12 +1857,12 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|疲劳驾驶报警}\n'+'3次'
+                            return '{top|疲劳驾驶报警}\n'+'{bottom|3次}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF',
                                 
                             },
                             bottom: {
@@ -1892,13 +1892,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:15, name:'疲劳驾驶报警',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -1920,12 +1920,12 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|天气预警}\n'+'15次'
+                            return '{top|天气预警}\n'+'{bottom|15次}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF',
                                 
                             },
                             bottom: {
@@ -1949,37 +1949,23 @@ export default {
                 },
                 data:[
                     {
+                        value:12, name:'天气预警',
+                        itemStyle: {
+                            color: '#32c5e9'
+                        }
+                    },
+                    {
                         value:1, name:'其他',
                         highlight: true,
                         label: {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#FFDB59'
                         }
                     },
-                    {
-                        value:12, name:'天气预警',
-                        itemStyle: {
-                            color: 'red'
-                        }
-                    },
-                    {
-                        value:3, name:'四川',
-                        highlight: true,
-                        label: {
-                          show: true  
-                        },
-                        itemStyle: {
-                            color:'green'
-                        }
-                    },
-                    {
-                        value:5, name:'北京',
-                        itemStyle: {
-                            color: 'yellow'
-                        }
-                    },
+                    
+                  
                     
                 ]
             }
@@ -1999,12 +1985,12 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|天气报警}\n'+'6次'
+                            return '{top|天气报警}\n'+'{bottom|6次}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF',
                                 
                             },
                             bottom: {
@@ -2028,37 +2014,23 @@ export default {
                 },
                 data:[
                     {
+                        value:12, name:'广州',
+                        itemStyle: {
+                            color: '#32c5e9'
+                        }
+                    },
+                    {
                         value:1, name:'重庆',
                         highlight: true,
                         label: {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color: '#FFDB59'
                         }
                     },
-                    {
-                        value:12, name:'广州',
-                        itemStyle: {
-                            color: 'red'
-                        }
-                    },
-                    {
-                        value:3, name:'四川',
-                        highlight: true,
-                        label: {
-                          show: true  
-                        },
-                        itemStyle: {
-                            color:'green'
-                        }
-                    },
-                    {
-                        value:5, name:'北京',
-                        itemStyle: {
-                            color: 'yellow'
-                        }
-                    },
+                   
+                   
                     
                 ]
             }
@@ -2078,12 +2050,12 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|其它报警}\n'+'23次'
+                            return '{top|其它报警}\n'+'{bottom|23次}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF',
                                 
                             },
                             bottom: {
@@ -2113,13 +2085,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:11, name:'其他报警',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
