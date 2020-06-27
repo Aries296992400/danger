@@ -60,12 +60,12 @@
         <p style="font-size:20px;">司机打卡信息</p>
           <div style="text-align: center; font-size:10px;border:1px solid #80adb5;margin-top:-2%">
             2020.5.8 12:00-12:15<br/>
-            事由：疲劳驾驶休息<br/>
+            事由：<span style="border:1px solid red;font-weight:bold;color:red">疲劳驾驶休息</span><br/>
             打卡地点：德婺高速休息区<br/>
           </div>
           <div style="text-align: center; font-size:10px;border:1px solid #80adb5;margin-top:2%">
             2020.5.8 9:00-9:15<br/>
-            事由：疲劳驾驶休息<br/>
+            事由：<span style="border:1px solid red;font-weight:bold;color:red">疲劳驾驶休息</span><br/>
             打卡地点：重庆温新路<br/>
           </div>
         </div>

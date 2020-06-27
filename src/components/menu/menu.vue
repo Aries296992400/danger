@@ -17,25 +17,25 @@
         <a-icon type="appstore" style="margin-right:25px;" />首页
       </div>
       <div class="menuButton" @click="GoToPage(`dangerMonitor`)">
-        <a-icon type="appstore" style="margin-right:25px;" />危险品监控
+        <a-icon type="exclamation-circle" style="margin-right:25px;color:red" />危险品监控
       </div>
       <div class="menuButton" @click="GoToPage(`specilDangerMonitor`)">
-        <a-icon type="appstore" style="margin-right:25px;" />特殊危险品监控
+        <a-icon type="info-circle" style="margin-right:25px;color:red" />特殊危险品监控
       </div>
       <div class="menuButton" @click="GoToPage(`warning`)">
-        <a-icon type="appstore" style="margin-right:25px;" />预警列表
+        <a-icon type="warning" style="margin-right:25px;" />预警列表
       </div>
       <div class="menuButton" @click="GoToPage(`alert`)">
-        <a-icon type="appstore" style="margin-right:25px;" />报警列表
+        <a-icon type="alert" style="margin-right:25px;" />报警列表
       </div>
       <div class="menuButton" @click="GoToPage(`carMonitor`)">
-        <a-icon type="appstore" style="margin-right:25px;" />车辆监控表
+        <a-icon type="car" style="margin-right:25px;" />车辆监控表
       </div>
       <div class="menuButton" @click="GoToPage(`carDetail`)">
-        <a-icon type="appstore" style="margin-right:25px;" />车辆监控表2
+        <a-icon type="car" style="margin-right:25px;" />车辆监控表2
       </div>
       <div class="menuButton" @click="GoToPage(`carWarning`)">
-        <a-icon type="appstore" style="margin-right:25px;" />车辆监控表3
+        <a-icon type="car" style="margin-right:25px;" />车辆监控表3
       </div>
 
       <div class="menuButton" @click="OnExit()">

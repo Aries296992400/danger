@@ -54,6 +54,7 @@ import Box2 from "../../components/uiTool/bigscreen/box2";
 import Menu from "../../components/menu/menu";
 import echarts from "../../components/uiTool/echarts";
 import Option from "../../const/option";
+
 export default {
   name: "dashboard",
   components: {
@@ -61,7 +62,7 @@ export default {
     Head,
     Box2,
     Menu,
-    echarts
+    echarts,
   },
   props: {},
   mounted() {},

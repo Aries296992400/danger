@@ -507,17 +507,17 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|综合事故率}\n'+'11%'
+                            return '{top|综合事故率\n}'+"{bottom|11%}"
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF',
                                 
                             },
                             bottom: {
                                 fontSize: 14,
-                                color: '#fff',
+                                color: '#FFDB59',
                                 fontWeight: 'bold',
                                 padding: [0, 0, 12, 0],
                             }
@@ -542,13 +542,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:11, name:'事故',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -570,17 +570,17 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|泄露事故率}\n'+'2%'
+                            return '{top|泄露事故率}\n'+'{bottom|2%}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF'
                                 
                             },
                             bottom: {
                                 fontSize: 14,
-                                color: '#fff',
+                                color: '#FFDB59',
                                 fontWeight: 'bold',
                                 padding: [0, 0, 12, 0],
                             }
@@ -605,13 +605,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:2, name:'事故',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -633,17 +633,17 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|交通事故率}\n'+'9%'
+                            return '{top|交通事故率}\n'+'{bottom|9%}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF'
                                 
                             },
                             bottom: {
                                 fontSize: 14,
-                                color: '#fff',
+                                color: '#FFDB59',
                                 fontWeight: 'bold',
                                 padding: [0, 0, 12, 0],
                             }
@@ -668,13 +668,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:9, name:'事故',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -696,17 +696,17 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|安全运输完成}\n'+'3764次'
+                            return '{top|安全运输完成}\n'+'{bottom|3764次}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF'
                                 
                             },
                             bottom: {
                                 fontSize: 14,
-                                color: '#fff',
+                                color: '#FFDB59',
                                 fontWeight: 'bold',
                                 padding: [0, 0, 12, 0],
                             }
@@ -731,13 +731,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:11, name:'事故',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -759,17 +759,17 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|运输占比}\n'+'15%'
+                            return '{top|运输占比}\n'+'{bottom|15%}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF'
                                 
                             },
                             bottom: {
                                 fontSize: 14,
-                                color: '#fff',
+                                color: '#FFDB59',
                                 fontWeight: 'bold',
                                 padding: [0, 0, 12, 0],
                             }
@@ -794,13 +794,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:15, name:'一类',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -822,17 +822,17 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|事故高发地}\n'+'广州'
+                            return '{top|事故高发地}\n'+'{bottom|广州}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF'
                                 
                             },
                             bottom: {
                                 fontSize: 14,
-                                color: '#fff',
+                                color: '#FFDB59',
                                 fontWeight: 'bold',
                                 padding: [0, 0, 12, 0],
                             }
@@ -863,7 +863,7 @@ export default {
                     {
                         value:12, name:'广州',
                         itemStyle: {
-                            color: 'red'
+                            color: '#FFDB59'
                         }
                     },
                     {
@@ -873,13 +873,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'green'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:5, name:'北京',
                         itemStyle: {
-                            color: 'yellow'
+                            color: '#FFDB5C'
                         }
                     },
                     
@@ -901,17 +901,17 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|事故高发时段}\n'+'下午'
+                            return '{top|事故高发时段}\n'+'{bottom|下午}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF'
                                 
                             },
                             bottom: {
                                 fontSize: 14,
-                                color: '#fff',
+                                color: '#FFDB59',
                                 fontWeight: 'bold',
                                 padding: [0, 0, 12, 0],
                             }
@@ -942,7 +942,7 @@ export default {
                     {
                         value:12, name:'广州',
                         itemStyle: {
-                            color: 'red'
+                            color: '#FFDB59'
                         }
                     },
                     {
@@ -952,13 +952,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'green'
+                            color:'#32c5e9'
                         }
                     },
                     {
                         value:5, name:'北京',
                         itemStyle: {
-                            color: 'yellow'
+                            color: '#FFDB5C'
                         }
                     },
                     
@@ -980,17 +980,17 @@ export default {
                         position: 'center',
                         formatter: (params)=>{
                             params;
-                            return '{top|避免事故发生}\n'+'23次'
+                            return '{top|避免事故发生}\n'+'{bottom|23次}'
                         },
                         rich: {
                             top: {
                                 fontSize: 12,
-                                color: '#fff',
+                                color: '#02EEBF'
                                 
                             },
                             bottom: {
                                 fontSize: 14,
-                                color: '#fff',
+                                color: '#FFDB59',
                                 fontWeight: 'bold',
                                 padding: [0, 0, 12, 0],
                             }
@@ -1015,13 +1015,13 @@ export default {
                           show: true  
                         },
                         itemStyle: {
-                            color:'#feb000'
+                            color:'#67e3e0'
                         }
                     },
                     {
                         value:11, name:'事故',
                         itemStyle: {
-                            color: '#00ffff'
+                            color: '#FFDB59'
                         }
                     },
                     
@@ -1471,6 +1471,12 @@ export default {
             data: [{
                 "name": "温度报警",
                 "value": 7
+            },{
+                "name": "压力报警",
+                "value": 7
+            },{
+                "name": "路况报警",
+                "value": 7
             }, {
                 "name": "湿度报警",
                 "value": 2
@@ -1509,6 +1515,12 @@ export default {
                     "name": "温度报警",
                     "value": 7
                 }, {
+                    "name": "压力报警",
+                    "value": 7
+                },{
+                    "name": "路况报警",
+                    "value": 7
+                },{
                     "name": "湿度报警",
                     "value": 2
                 }, {
