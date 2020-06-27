@@ -31,20 +31,20 @@
           <dv-water-level-pond :config="jkxt" style="width:50%;height:80%" />
         </Box2>
         <div class="topNum" style="top:13%;left:30%;border:2px solid #1adedd !important;">
-          <div class="topNumTitle">253</div>
-          <div class="topNumSubTitle">成功避免了253次事故</div>
+          <div class="topNumTitle">{{this.key1}}</div>
+          <div class="topNumSubTitle">成功避免了{{this.key1}}次事故</div>
         </div>
         <div class="topNum" style="top:13%;left:40%">
-          <div class="topNumTitle">965</div>
-          <div class="topNumSubTitle">保障965次危险品运输</div>
+          <div class="topNumTitle">{{this.key2}}</div>
+          <div class="topNumSubTitle">保障{{this.key2}}次危险品运输</div>
         </div>
         <div class="topNum" style="top:13%;left:50%">
-          <div class="topNumTitle">85</div>
-          <div class="topNumSubTitle">覆盖85家危运公司</div>
+          <div class="topNumTitle">{{this.key3}}</div>
+          <div class="topNumSubTitle">覆盖{{this.key3}}家危运公司</div>
         </div>
         <div class="topNum" style="top:13%;left:60%">
-          <div class="topNumTitle">302</div>
-          <div class="topNumSubTitle">实时追踪302条运输线路</div>
+          <div class="topNumTitle">{{this.key4}}</div>
+          <div class="topNumSubTitle">实时追踪{{this.key4}}条运输线路</div>
         </div>
       </div>
     </transition>
@@ -59,6 +59,8 @@ import Box2 from "../../components/uiTool/bigscreen/box2";
 import Menu from "../../components/menu/menu";
 import echarts from "../../components/uiTool/echarts";
 import Option from "../../const/option";
+import _StorageTools from '../../components/tool/_StorageTools'
+var timer1
 export default {
   name: "dashboard",
   components: {
@@ -70,9 +72,31 @@ export default {
     echarts
   },
   props: {},
-  mounted() {},
+  mounted() {
+    timer1=setInterval(() => {
+      var key1=parseInt(_StorageTools.getItem("key1"))+parseInt(Math.random()*10)||0
+      var key2=parseInt(_StorageTools.getItem("key2"))+parseInt(Math.random()*10)||0
+      var key3=parseInt(_StorageTools.getItem("key3"))+parseInt(Math.random()*10)||0
+      var key4=parseInt(_StorageTools.getItem("key4"))+parseInt(Math.random()*10)||0
+      _StorageTools.setItem("key1",key1)
+      _StorageTools.setItem("key2",key2)
+      _StorageTools.setItem("key3",key3)
+      _StorageTools.setItem("key4",key4)
+      this.key1=key1
+      this.key2=key2
+      this.key3=key3
+      this.key4=key4
+    }, 2000);
+  },
+  destroyed(){
+    clearInterval(timer1)
+  },
   data() {
     return {
+      key1:_StorageTools.getItem("key1"),
+      key2:_StorageTools.getItem("key2"),
+      key3:_StorageTools.getItem("key3"),
+      key4:_StorageTools.getItem("key4"),
       wxyfl: Option.wxyfl,
       tswxy: Option.tswxy,
       cljk: Option.cljk,

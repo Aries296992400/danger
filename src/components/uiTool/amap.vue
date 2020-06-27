@@ -14,8 +14,8 @@ export default {
       mapEvents: {
         init(o) {
           o.setMapStyle("amap://styles/9fc0c6eb94c8573dafbfe0e6cad0a633"); //自定义的高德地图的样式，我选的是马卡龙
-          o.setZoom(13);
-          o.setCenter([106.586719,29.564574])
+          o.setZoom(5);
+          o.setCenter([107.576553,33.883231])
         }
       }
     };

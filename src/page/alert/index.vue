@@ -21,24 +21,22 @@
           style="top:60%;right:50px;left:32%;"
         >
           <echarts :option="ssyj"></echarts>
-        </Box2> -->
-        <Box2 title="报警地图" autoSize="true" titleSize="2" class="boxD" style="top:13%;right:50px;">
-          
-        </Box2>
+        </Box2>-->
+        <Box2 title="报警地图" autoSize="true" titleSize="2" class="boxD" style="top:13%;right:50px;"></Box2>
         <Box2 title="报警信息更新" autoSize="true" class="box" style="top:73%;right:50px;">
           <echarts :option="yjxxbt" style="width:1000px;height:1000px"></echarts>
         </Box2>
         <div class="topNum" style="top:16%;left:45%;border:2px solid #1adedd !important;">
-          <div class="topNumTitle">725</div>
-          <div class="topNumSubTitle">今日已报警725次</div>
+          <div class="topNumTitle">{{this.key1}}</div>
+          <div class="topNumSubTitle">今日已报警{{this.key1}}次</div>
         </div>
         <div class="topNum" style="top:46%;left:45%">
-          <div class="topNumTitle">358</div>
-          <div class="topNumSubTitle">为358个正在运输的司机护航</div>
+          <div class="topNumTitle">{{this.key2}}</div>
+          <div class="topNumSubTitle">为{{this.key2}}个正在运输的司机护航</div>
         </div>
         <div class="topNum" style="top:76%;left:45%">
-          <div class="topNumTitle">23</div>
-          <div class="topNumSubTitle">覆盖23类报警监控</div>
+          <div class="topNumTitle">{{this.key3}}</div>
+          <div class="topNumSubTitle">覆盖{{this.key3}}类报警监控</div>
         </div>
       </div>
     </transition>
@@ -46,14 +44,15 @@
 </template>
 
 <script>
-
-import Back from "../../components/uiTool/background"
+import Back from "../../components/uiTool/background";
 
 import Head from "../../components/uiTool/bigscreen/head";
 import Box2 from "../../components/uiTool/bigscreen/box2";
 import Menu from "../../components/menu/menu";
 import echarts from "../../components/uiTool/echarts";
 import Option from "../../const/option";
+import _StorageTools from "../../components/tool/_StorageTools";
+var timer1;
 
 export default {
   name: "dashboard",
@@ -62,12 +61,30 @@ export default {
     Head,
     Box2,
     Menu,
-    echarts,
+    echarts
   },
   props: {},
-  mounted() {},
+  mounted() {
+    timer1=setInterval(() => {
+      var key1=parseInt(_StorageTools.getItem("key1"))+parseInt(Math.random()*10)||0
+      var key2=parseInt(_StorageTools.getItem("key2"))+parseInt(Math.random()*10)||0
+      var key3=parseInt(_StorageTools.getItem("key3"))+parseInt(Math.random()*10)||0
+      _StorageTools.setItem("key1",key1)
+      _StorageTools.setItem("key2",key2)
+      _StorageTools.setItem("key3",key3)
+      this.key1=key1
+      this.key2=key2
+      this.key3=key3
+    }, 2000);
+  },
+  destroyed() {
+    clearInterval(timer1);
+  },
   data() {
     return {
+      key1: _StorageTools.getItem("key1"),
+      key2: _StorageTools.getItem("key2"),
+      key3: _StorageTools.getItem("key3"),
       wxyfl: Option.wxyfl,
       tswxy: Option.tswxy,
       cljk: Option.cljk,
@@ -86,28 +103,27 @@ export default {
           o.setMapStyle("amap://styles/9fc0c6eb94c8573dafbfe0e6cad0a633");
           o.setZoom(13);
         }
-      },
+      }
     };
   },
   methods: {
     changeSpin() {
       this.isSpin = !this.isSpin;
-    },
+    }
   }
 };
 </script>
 
 <style scoped>
-
 .topNum {
   position: fixed;
   width: 160px;
   height: 140px;
   color: white;
   align-items: center;
-  border:2px solid #08636f;
+  border: 2px solid #08636f;
   border-radius: 4px;
-  padding:10px;
+  padding: 10px;
   cursor: pointer;
 }
 .topNumTitle {
@@ -116,7 +132,6 @@ export default {
   align-items: center;
   text-align: center;
   line-height: 70px;
-
 }
 .topNumSubTitle {
   font-size: 15px;
@@ -173,5 +188,4 @@ export default {
 .slide-fade-leave-to {
   opacity: 0;
 }
-
 </style>
