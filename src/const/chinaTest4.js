@@ -33,37 +33,9 @@ var geoCoordMap = {
 };
 var hjDatas = [
     [{
-        name: '巫山',
-        value: 5
-    }],
-    [{
-        name: '万州',
-        value: 1
-    }],
-    [{
-        name: '石柱',
-        value: 3
-    }],
-    [{
-        name: '秀山',
-        value: 4
-    }],
-    [{
-        name: '川东',
-        value: 1
-    }],
-    [{
-        name: '綦南',
-        value: 0
-    }],
-    [{
         name: '北碚',
         value: 2
     }],
-    [{
-        name: '永川',
-        value: 0
-    }]
 ];
 
 

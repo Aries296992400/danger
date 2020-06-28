@@ -82,7 +82,7 @@ import Box2 from "../../components/uiTool/bigscreen/box2";
 import Head from "../../components/uiTool/bigscreen/head";
 import echarts from "../../components/uiTool/echarts";
 import Option from "../../const/option";
-import ChinaTest3 from "../../const/chinaTest3";
+import ChinaTest4 from "../../const/chinaTest4";
 
 import echarts2 from "../../components/uiTool/echarts2";
 
@@ -100,7 +100,7 @@ export default {
   methods: {},
   data(){
     return {
-      ChinaTest: ChinaTest3.optionXyMap01,
+      ChinaTest: ChinaTest4.optionXyMap01,
         bt211:Option.bt211,
         bt221:Option.bt221,
         bt231:Option.bt231,

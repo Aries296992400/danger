@@ -83,7 +83,7 @@ import echarts from "../../components/uiTool/echarts";
 import Option from "../../const/option";
 import echarts2 from "../../components/uiTool/echarts2";
 
-import ChinaTest3 from "../../const/chinaTest3";
+import ChinaTest4 from "../../const/chinaTest4";
 
 export default {
   name: "DangerMonitor",
@@ -99,7 +99,7 @@ export default {
   methods: {},
   data(){
     return {
-      ChinaTest: ChinaTest3.optionXyMap01,
+      ChinaTest: ChinaTest4.optionXyMap01,
         clzltj:Option.clzltj,
         cctj:Option.cctj,
         sgfsdtj:Option.sgfsdtj,
