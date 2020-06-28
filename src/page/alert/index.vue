@@ -87,7 +87,7 @@ export default {
       this.lineTest.xAxis[0].data.push(axisData);
       this.lineTest.xAxis[1].data.shift();
       this.lineTest.xAxis[1].data.push(app++);
-    }, 1000);
+    }, 5000);
     timer1=setInterval(() => {
       var key1=parseInt(_StorageTools.getItem("key1"))+parseInt(Math.random()*10)||0
       var key2=parseInt(_StorageTools.getItem("key2"))+parseInt(Math.random()*10)||0
@@ -116,10 +116,14 @@ lineTest: {
             label: {
               backgroundColor: "#283b56"
             }
-          }
+          },
+        //   formatter(params){
+        //     console.log(params[0])
+        //     return params;
+        //  }
         },
         legend: {
-          data: ["最新成交价", "预购队列"]
+          data: ["最新报警", "以往平均"]
         },
         toolbox: {
           show: true,
@@ -147,11 +151,18 @@ lineTest: {
                 now = new Date(now - 2000);
               }
               return res;
-            })()
+            })(),
+             axisLine:{
+                lineStyle:{
+                    color:'#02EEBF',
+                    // width:8,//这里是为了突出显示加上的
+                }
+            } 
+
           },
           {
             type: "category",
-            boundaryGap: true,
+            // boundaryGap: true,
             data: (function() {
               var res = [];
               var len = 10;
@@ -159,30 +170,43 @@ lineTest: {
                 res.push(10 - len - 1);
               }
               return res;
-            })()
+            })(),
+          //    axisLine:{
+          //               lineStyle:{
+          //                   color:'#FF0000',
+          //                   width:8,//这里是为了突出显示加上的
+          //               }
+          //           } 
+
           }
         ],
         yAxis: [
           {
             type: "value",
             scale: true,
-            name: "价格",
+            name: "报警数",
             max: 30,
             min: 0,
-            boundaryGap: [0.2, 0.2]
+            boundaryGap: [0.2, 0.2],
+            axisLine:{
+                lineStyle:{
+                    color:'#02EEBF',
+                    // width:8,//这里是为了突出显示加上的
+                }
+            } 
           },
           {
-            type: "value",
-            scale: true,
-            name: "预购量",
-            max: 1200,
-            min: 0,
-            boundaryGap: [0.2, 0.2]
+            // type: "value",
+            // scale: true,
+            // name: "预购量",
+            // max: 1200,
+            // min: 0,
+            // boundaryGap: [0.2, 0.2]
           }
         ],
         series: [
           {
-            name: "预购队列",
+            name: "最新报警",
             type: "bar",
             xAxisIndex: 1,
             yAxisIndex: 1,
@@ -193,10 +217,10 @@ lineTest: {
                 res.push(Math.round(Math.random() * 1000));
               }
               return res;
-            })()
+            })(),
           },
           {
-            name: "最新成交价",
+            name: "以往平均",
             type: "line",
             data: (function() {
               var res = [];
