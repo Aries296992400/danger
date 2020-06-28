@@ -26,6 +26,7 @@
           <echarts2 :option="optionXyMap01"></echarts2>
         </Box2>
         <Box2 title="预警信息更新" autoSize="true" class="box" style="top:73%;right:50px;">
+          <echarts :option="lineTest" style="margin-top:10%;left:50px;"></echarts>
         </Box2>
         <div class="topNum" style="top:16%;left:45%;border:2px solid #1adedd !important;">
           <div class="topNumTitle">{{this.key1}}</div>
@@ -56,8 +57,10 @@ import Option from "../../const/option";
 import ChinaTest2 from "../../const/chinaTest2";
 import _StorageTools from "../../components/tool/_StorageTools";
 import ChinaTest from "../../const/chinaTest";
+// import lineTest from "../../const/lineTest";
 
 var timer1;
+var timer2;
 export default {
   name: "dashboard",
   components: {
@@ -70,6 +73,23 @@ export default {
   },
   props: {},
   mounted() {
+    var app=11;
+    
+    timer2 =setInterval(() => {
+      var axisData = new Date().toLocaleTimeString().replace(/^\D*/, "");
+      var data0 = this.lineTest.series[0].data;
+      var data1 = this.lineTest.series[1].data;
+      data0.shift();
+      data0.push(Math.round(Math.random() * 1000));
+      data1.shift();
+      data1.push((Math.random() * 10 + 5).toFixed(1) - 0);
+
+      this.lineTest.xAxis[0].data.shift();
+      this.lineTest.xAxis[0].data.push(axisData);
+      this.lineTest.xAxis[1].data.shift();
+      this.lineTest.xAxis[1].data.push(app++);
+    }, 1000);
+    
     timer1 = setInterval(() => {
       var key1 =
         parseInt(_StorageTools.getItem("key1")) +
@@ -87,14 +107,119 @@ export default {
       this.key2 = key2;
       this.key3 = key3;
     }, 2000);
+    
+    
   },
   destroyed() {
     clearInterval(timer1);
+    clearInterval(timer2);
+
   },
   data() {
     return {
       ChinaTest: ChinaTest.optionXyMap01,
-
+      lineTest: {
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "cross",
+            label: {
+              backgroundColor: "#283b56"
+            }
+          }
+        },
+        legend: {
+          data: ["最新成交价", "预购队列"]
+        },
+        toolbox: {
+          show: true,
+          feature: {
+            dataView: { readOnly: false },
+            restore: {},
+            saveAsImage: {}
+          }
+        },
+        dataZoom: {
+          show: false,
+          start: 0,
+          end: 100
+        },
+        xAxis: [
+          {
+            type: "category",
+            boundaryGap: true,
+            data: (function() {
+              var now = new Date();
+              var res = [];
+              var len = 10;
+              while (len--) {
+                res.unshift(now.toLocaleTimeString().replace(/^\D*/, ""));
+                now = new Date(now - 2000);
+              }
+              return res;
+            })()
+          },
+          {
+            type: "category",
+            boundaryGap: true,
+            data: (function() {
+              var res = [];
+              var len = 10;
+              while (len--) {
+                res.push(10 - len - 1);
+              }
+              return res;
+            })()
+          }
+        ],
+        yAxis: [
+          {
+            type: "value",
+            scale: true,
+            name: "价格",
+            max: 30,
+            min: 0,
+            boundaryGap: [0.2, 0.2]
+          },
+          {
+            type: "value",
+            scale: true,
+            name: "预购量",
+            max: 1200,
+            min: 0,
+            boundaryGap: [0.2, 0.2]
+          }
+        ],
+        series: [
+          {
+            name: "预购队列",
+            type: "bar",
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            data: (function() {
+              var res = [];
+              var len = 10;
+              while (len--) {
+                res.push(Math.round(Math.random() * 1000));
+              }
+              return res;
+            })()
+          },
+          {
+            name: "最新成交价",
+            type: "line",
+            data: (function() {
+              var res = [];
+              var len = 0;
+              while (len < 10) {
+                res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                len++;
+              }
+              return res;
+            })()
+          }
+        ]
+      },
       key1: _StorageTools.getItem("key1"),
       key2: _StorageTools.getItem("key2"),
       key3: _StorageTools.getItem("key3"),
@@ -117,9 +242,7 @@ export default {
           o.setMapStyle("amap://styles/9fc0c6eb94c8573dafbfe0e6cad0a633");
           o.setZoom(13);
         }
-      },
-     
-
+      }
     };
   },
   methods: {
