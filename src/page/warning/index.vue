@@ -23,7 +23,7 @@
           <echarts :option="ssyj"></echarts>
         </Box2>-->
         <Box2 title="预警地图" autoSize="true" titleSize="2" class="boxD" style="top:13%;right:50px;">
-          <echarts2 :option="ChinaTest"></echarts2>
+          <echarts2 :option="optionXyMap01"></echarts2>
         </Box2>
         <Box2 title="预警信息更新" autoSize="true" class="box" style="top:73%;right:50px;">
         </Box2>
@@ -70,7 +70,6 @@ export default {
   },
   props: {},
   mounted() {
-    console.log(ChinaTest2.optionXyMap01, "sssss");
     timer1 = setInterval(() => {
       var key1 =
         parseInt(_StorageTools.getItem("key1")) +

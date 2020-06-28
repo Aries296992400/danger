@@ -23,7 +23,7 @@
           <echarts :option="ssyj"></echarts>
         </Box2>-->
         <Box2 title="报警地图" autoSize="true" titleSize="2" class="boxD" style="top:13%;right:50px;">
-          <echarts2 :option="ChinaTest"></echarts2>
+          <echarts2 :option="optionXyMap01"></echarts2>
 
         </Box2>
         <Box2 title="报警信息更新" autoSize="true" class="box" style="top:73%;right:50px;">
@@ -55,6 +55,7 @@ import Head from "../../components/uiTool/bigscreen/head";
 import Box2 from "../../components/uiTool/bigscreen/box2";
 import Menu from "../../components/menu/menu";
 import echarts from "../../components/uiTool/echarts";
+import ChinaTest2 from "../../const/chinaTest2";
 import Option from "../../const/option";
 import _StorageTools from "../../components/tool/_StorageTools";
 var timer1;
@@ -89,6 +90,7 @@ export default {
   data() {
     return {
       ChinaTest: ChinaTest.optionXyMap01,
+      optionXyMap01: ChinaTest2.optionXyMap01,
 
       key1: _StorageTools.getItem("key1"),
       key2: _StorageTools.getItem("key2"),

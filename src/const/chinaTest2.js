@@ -85,28 +85,28 @@ var convertData = function (data) {
 
 
 var option = {
-    backgroundColor: {
-        type: 'linear',
-        x: 0,
-        y: 0,
-        x2: 1,
-        y2: 1,
-        colorStops: [{
-            offset: 0, color: '#0f378f' // 0% 处的颜色
-        }, {
-            offset: 1, color: '#00091a' // 100% 处的颜色
-        }],
-        globalCoord: false // 缺省为 false
-    },
-    title: {
-        top: 20,
-        text: '“会员活跃度” - 山东省',
-        subtext: '',
-        x: 'center',
-        textStyle: {
-            color: '#ccc'
-        }
-    },
+    // backgroundColor: {
+    //     type: 'linear',
+    //     x: 0,
+    //     y: 0,
+    //     x2: 1,
+    //     y2: 1,
+    //     colorStops: [{
+    //         offset: 0, color: '#0f378f' // 0% 处的颜色
+    //     }, {
+    //         offset: 1, color: '#00091a' // 100% 处的颜色
+    //     }],
+    //     globalCoord: false // 缺省为 false
+    // },
+    // title: {
+    //     top: 20,
+    //     text: '“会员活跃度” - 山东省',
+    //     subtext: '',
+    //     x: 'center',
+    //     textStyle: {
+    //         color: '#ccc'
+    //     }
+    // },
 
     tooltip: {
         trigger: 'item',
@@ -262,8 +262,6 @@ var option = {
         },
     ]
 };
-
-
 export default {
-    optionXyMap01:option
+    optionXyMap01: option
 }

@@ -12,6 +12,8 @@ import "echarts/lib/chart/graph";
 import "echarts/lib/chart/funnel";
 import "echarts/lib/chart/map";
 import "echarts/lib/chart/effectScatter";
+import "echarts/lib/chart/scatter";
+import "echarts/lib/chart/lines";
 
 import "echarts/lib/component/title";
 import "echarts/lib/component/legend";
@@ -19,6 +21,8 @@ import "echarts/lib/component/tooltip";
 import "echarts/lib/component/geo";
 import "echarts/lib/component/grid";
 import "echarts/lib/component/timeline";
+import "echarts/lib/component/visualMap";
+
 
 export default {
   name: "echarts2",

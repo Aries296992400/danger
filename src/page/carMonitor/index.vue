@@ -3,50 +3,51 @@
     <Back></Back>
     <Menu />
     <Head>
-          <p>危险品运输车辆监控</p>
+      <p>危险品运输车辆监控</p>
     </Head>
     <Box2 title="危险品运输车辆历史统计" autoSize="true" titleSize="1" class="boxS" style="top:13%;left:50px">
-        <div class="d4">
-          <echarts :option="clzltj"></echarts>
-        </div>
-        <div class="d4">
-          <echarts :option="cctj"></echarts>
-        </div>
-        <div class="d4">
-          <echarts :option="sgfsdtj"></echarts>
-        </div>
-         
-
+      <div class="d4">
+        <echarts :option="clzltj"></echarts>
+      </div>
+      <div class="d4">
+        <echarts :option="cctj"></echarts>
+      </div>
+      <div class="d4">
+        <echarts :option="sgfsdtj"></echarts>
+      </div>
     </Box2>
     <Box2 title="危险品运输车辆实时统计" autoSize="true" titleSize="1" class="boxSS" style="top:57%;left:50px">
-        <div class="d2">
-          <echarts :option="sscctj"></echarts>
-        </div>
-        <div class="d2">
-          <echarts :option="ssjbtj"></echarts>
-        </div>
-        
+      <div class="d2">
+        <echarts :option="sscctj"></echarts>
+      </div>
+      <div class="d2">
+        <echarts :option="ssjbtj"></echarts>
+      </div>
     </Box2>
     <Box2 title="运输车辆轨迹图" autoSize="true" titleSize="1" class="boxSSS" style="top:13%;left:51%">
-            <echarts2 :option="ChinaTest"></echarts2>
-
+      <echarts2 :option="ChinaTest"></echarts2>
     </Box2>
-    <Box2  title="实时车况" autoSize="true" titleSize="1" class="boxSSSS" style="top:70%;left:51%">
-      <dv-scroll-board @click="GoToPage(`carDetail`)" :config="ssck" class="aab"  style="color:white;height:90%" />  
+    <Box2 title="实时车况" autoSize="true" titleSize="1" class="boxSSSS" style="top:70%;left:51%">
+      <dv-scroll-board
+        @click="GoToPage(`carDetail`)"
+        :config="ssck"
+        class="aab"
+        style="color:white;height:90%"
+      />
     </Box2>
   </div>
 </template>
 
 <script>
 import Menu from "../../components/menu/menu";
-import Back from "../../components/uiTool/background"
+import Back from "../../components/uiTool/background";
 import Box2 from "../../components/uiTool/bigscreen/box2";
 import Head from "../../components/uiTool/bigscreen/head";
 import echarts from "../../components/uiTool/echarts";
 import Option from "../../const/option";
 import echarts2 from "../../components/uiTool/echarts2";
 
-import ChinaTest from "../../const/chinaTest";
+import ChinaTest3 from "../../const/chinaTest3";
 
 export default {
   name: "DangerMonitor",
@@ -59,18 +60,18 @@ export default {
     echarts2
   },
   props: {},
-  data(){
+  data() {
     return {
-      ChinaTest: ChinaTest.optionXyMap01,
-        clzltj:Option.clzltj,
-        cctj:Option.cctj,
-        sgfsdtj:Option.sgfsdtj,
-        ssck:Option.ssck,
-        sscctj:Option.sscctj,
-        ssjbtj:Option.ssjbtj
-    }
+      ChinaTest: ChinaTest3.optionXyMap01,
+      clzltj: Option.clzltj,
+      cctj: Option.cctj,
+      sgfsdtj: Option.sgfsdtj,
+      ssck: Option.ssck,
+      sscctj: Option.sscctj,
+      ssjbtj: Option.ssjbtj
+    };
   },
-  methods:{
+  methods: {
     GoToPage(url) {
       console.log(url);
       this.$router.push(`/${url}`);
